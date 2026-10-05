@@ -17,3 +17,6 @@ print("KNN accuracy:", round(knn.score(X_test, y_test), 2))
 svm = SVC()                                             
 svm.fit(X_train, y_train)                               
 print("SVM accuracy:", round(svm.score(X_test, y_test), 2))  
+new_person = scaler.transform([[40, 90000]])             
+answer = knn.predict(new_person)[0]                      
+print("Will they buy? (1=yes, 0=no):", answer)          
